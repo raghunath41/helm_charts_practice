@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: main-app-with-hpa
+  name: {{ .Values.deploymentName }}
 spec:
-  replicas: 1
+  replicas: {{ .Values.deploymentOne.deploymentReplicas }}
   selector:
     matchLabels:
       app: php-app
