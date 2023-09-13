@@ -1,4 +1,4 @@
 
 deploymentName: my-deployment
 deploymentOne:
-  deploymentReplicas: 2
+  deploymentReplicas: 4
