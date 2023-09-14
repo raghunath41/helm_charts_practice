@@ -1,0 +1,2 @@
+myInformation:
+  name: {{ Values.myName | indent 4 | quote }}
