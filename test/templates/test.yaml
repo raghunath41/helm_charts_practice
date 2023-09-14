@@ -1,2 +1,3 @@
 myInformation:
-  name: {{ .Values.myName | trim | quote | upper | randNumeric 3 }}
+  name: {{ .Values.myName | trim | quote | upper }}
+  number: {{ randNumeric 3 }}
