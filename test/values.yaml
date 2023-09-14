@@ -4,4 +4,6 @@ location: bangalore
 myContainer1:
   name: nginx
   image: nginx
-  containerPort: 8080
+  containerPort:
+    - 8080
+    - 50000
