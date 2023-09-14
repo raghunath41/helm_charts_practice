@@ -3,13 +3,8 @@ myInformation:
   number: {{ randNumeric 3  }}
   label: {{ include "test.labels" . | nindent 4 }}
 
-{{- with .Values.myContainer1 }}
-containers:
-  - name: {{ .name }}
-    image: {{ .image }}
-    ports: 
-      containerPort:
-      {{- range .containerPort }}
-      - {{ . }}
-      {{- end }}
+{{- if .Values.jenkins_enable -}}
+{{- include "test.container2" . }}
+{{- else -}}
+{{- include "test.container1" . }}
 {{- end }}

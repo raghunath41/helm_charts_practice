@@ -1,9 +1,20 @@
 myName:    "raghu"
 location: bangalore
 
+
+jenkins_enable: true
+
 myContainer1:
   name: nginx
   image: nginx
+  containerPort:
+    - 8080
+    - 50000
+
+    
+myContainer2:
+  name: jenkins
+  image: jenkins
   containerPort:
     - 8080
     - 50000
