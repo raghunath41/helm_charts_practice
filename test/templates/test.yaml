@@ -2,4 +2,4 @@ myInformation:
   name: {{ .Values.myName | trim | quote | upper }}
   number: {{ randNumeric 3  }}
   label: 
-      {{- include "test.labels" . | indent 4}}
+      {{ include "test.labels" }}
