@@ -2,3 +2,11 @@ myInformation:
   name: {{ .Values.myName | trim | quote | upper }}
   number: {{ randNumeric 3  }}
   label: {{ include "test.labels" . | nindent 4 }}
+
+{{- with .Values.myContainer1 }}
+containers:
+  - name: {{ .name }}
+    image: {{ .image }}
+    ports: 
+      containerPort: {{ .containerPort }}
+{{- end }}

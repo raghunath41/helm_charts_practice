@@ -1,2 +1,7 @@
 myName:    "raghu"
 location: bangalore
+
+myContainer1:
+  name: nginx
+  image: nginx
+  containerPort: 8080
