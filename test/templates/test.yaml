@@ -1,2 +1,2 @@
 myInformation:
-  name: {{ .Values.myName | trim }}
+  name: {{ .Values.myName | trim | quote }}
