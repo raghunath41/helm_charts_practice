@@ -1,4 +1,4 @@
 myInformation:
   name: {{ .Values.myName | trim | quote | upper }}
   number: {{ randNumeric 3  }}
-  label: {{- .Values.location git | nindent 8  }}
+  label: {{- .Values.location | nindent 8  }}
