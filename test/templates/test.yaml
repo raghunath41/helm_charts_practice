@@ -9,7 +9,7 @@ containers:
     image: {{ .image }}
     ports: 
       containerPort:
-      {{- range .myContainer1 }}
+      {{- range .containerPort }}
       - {{ . }}
       {{- end }}
 {{- end }}
