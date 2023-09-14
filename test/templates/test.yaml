@@ -10,6 +10,6 @@ containers:
     ports: 
       containerPort:
       {{- range .myContainer1 }}
-        {{ . }}
+      - {{ . }}
       {{- end }}
 {{- end }}
